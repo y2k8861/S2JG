@@ -1,0 +1,47 @@
+{{>layout/header}}
+<div class="container">
+    <h3 class="pageTite">문의함</h3>
+    <div class="tableWrap">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col" style="width:5%">번호</th>
+                <th scope="col" style="width:27%">제목</th>
+                <th scope="col" style="width:40%">작성일</th>
+                <th scope="col" style="width:28%">답변현황</th>
+            </tr>
+            </thead>
+            <tbody id="inquiryTableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--  페이지네이션  -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+            <!-- JS 페이지버튼이 들어갈 자리 -->
+
+        </ul>
+    </nav>
+
+<!--    <div class="searchBox inquirySearchBox" id="searchbox">-->
+<!--        <div class="selectWrap">-->
+<!--            <select class="searchSelect key inquiryBtn">    &lt;!&ndash; 검색 key : SQL 검색시 사용할 필드명  &ndash;&gt;-->
+<!--                <option class="inquiryBtnFont" value="i.ititle">제목</option>-->
+<!--                <option class="inquiryBtnFont" value="i.icontent">내용</option>-->
+<!--                <option class="inquiryBtnFont" value="m.id">작성자</option>-->
+<!--            </select>-->
+<!--            <i class="bi bi-caret-down-fill"></i>-->
+<!--        </div>-->
+<!--        <input type="text" name="keyword" class="keyword" id="searchword" />-->
+<!--        <button type="button" onclick="onSearch()" class="inquiryBtn" value="검색"><i class="bi bi-search"></i></button>-->
+<!--    </div>-->
+
+
+
+</div>
+<script src="/js/inquiry.js"></script>
+<script src="js/index.js"></script>
+{{>layout/footer}}

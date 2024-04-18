@@ -1,0 +1,96 @@
+{{>layout/header}}
+
+
+<div class="container">
+<h3 class="pageTite"> 메인 페이지 </h3>
+<div class="indexSelectBox">
+
+    <select onchange="doGetRouteSearch('start',this)" id="startSelectBox" class="form-select " aria-label="Default select example" >
+
+
+
+        <!-- 왜 셀렉트 박스에 출발지를 선택하는거죠??  그 출발지를 먼저 선택하면 그 출발지에 음 디비에 저장되있는 도착지만 뜨게 설정하고 싶어서--><!-- 아 그럼 출발지 셀렉트에 DB에 있는 출발지 목록을 가지고 와야 하는거겠네요?? 네네 근데 가져온거같은데 조건도 잘걸엇는뎅 아닌가-->
+    </select>
+
+
+    <select  onchange="doGetRouteSearch('end',this)" class="form-select" id="endSelectBox" aria-label="Default select example">
+
+
+    </select>
+
+
+    <button  class="btn" type="button" onclick="doGetRouteNo()"> 조회하기 </button>
+</div>
+
+<div>
+
+<!--    <div class="dateSelectBox">-->
+
+<!--        <label for="routedate">날짜선택 :</label>-->
+<!--        <input type="date" onclick="ondate()" id="key" name="key" value="route_date">-->
+<!--    </div>-->
+    <!--    <div class="pagebtn">-->
+    <!--        전체 시간표 :<span class="totalPage"></span>-->
+    <!--        현재 시간표 :<span class="totalBoardSize"></span>-->
+    <!--    </div>-->
+
+    <div class="tableWrap">
+        <table id="routeTime" class="table table-hover table align-middle " >
+            <thead>
+            <tr>
+                <th scope="col" style="width:10%;">no</th>
+                <th scope="col" style="width:30%;">출발시간</th>
+                <th scope="col" style="width:30%;">도착시간</th>
+                <th scope="col" style="width:10%;">등급</th>
+                <th scope="col" style="width:20%;">가격</th>
+            </tr>
+            </thead>
+            <tbody id="boardTableBody">
+                <tr>
+                    <th colspan="5" rowspan="5" style="text-align:center;"><br /><br /><br />출발/도착지 선택 후 조회 버튼을 눌러주세요.<br /><br /><br /><br /></th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--페이지 네이션-->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+        </ul>
+    </nav>
+
+
+    <div class="searchBox routeSearchWrap boardSearchBox" id="searchbox">
+        <div class="selectWrap">
+            <select class="searchSelect key boardBtn searchSelect">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+                <option value="routeTimeStartTime">출발시간</option>
+                <option value="routeTimeEndTime">도착시간</option>
+            </select>
+            <i class="bi bi-caret-down-fill"></i>
+        </div>
+        <input type="text" class="keyword" name="keyword" id="searchword" />
+        <button class="boardBtn" type="button" onclick="onSearch()" value="검색"><i class="bi bi-search"></i></button>
+    </div>
+</div>
+</div>
+
+<script src="/js/routetime.js"></script>
+<script src="/js/index.js"></script>
+{{>layout/footer}}
+
+<!--<div >
+    <h3>출발지</h3>
+    <div class="startRouteBus" > &lt;!&ndash; 여기가 좋을거 같아요, 좀더 이따 다시 올게요 &ndash;&gt;
+
+    </div>
+</div>
+
+<div>
+    <h3>도착지</h3>
+    <div class="endRouteBus">
+
+    </div>
+</div>
+<button  class="btn" type="button" > 조회하기 </button>-->

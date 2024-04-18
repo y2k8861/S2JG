@@ -1,0 +1,22 @@
+{{>layout/header}}
+<link rel="stylesheet" href="/css/signup.css" type="text/css">
+
+<div class="container signupBox">
+    <form class="signUpForm" style="width:100%">
+        <h3 class="signupTitle"> 로그인 페이지 </h3>
+        <div class="inputWrap">
+            <input type="text" id="memberid" class="w100 signInput" name="memberId" placeholder="아이디를 입력해주세요."/>
+        </div>
+        <div class="inputWrap">
+            <input class="w100" type="password" id="memberpw" name="memberPw" placeholder="비밀번호를 입력해주세요." />
+        </div>
+        <div class="losibtn signUpBtnBox">
+            <button class="btn signUpBtn" type="button" onclick="login()">로그인</button>
+            <a class="btn signUpBtn" href="/member/signup"> 회원가입 </a>
+        </div>
+    </form>
+</div>
+
+
+<script src="/js/login.js"></script>
+{{>layout/footer}}

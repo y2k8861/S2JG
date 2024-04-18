@@ -1,0 +1,89 @@
+{{>layout/adminHeader}}
+<link rel="stylesheet" href="/css/route.css" type="text/css">
+    <h3 class="pageTite">노선별 시간 페이지</h3>
+
+    <div class="flexBox btnWrap btnWrapTop">
+        <button type="button" class="btn" onclick="onDownload()">액셀 받기</button>
+    </div>
+
+    <div class="tableWrap">
+        <table id="routeAllTb" class="table table-hover">
+            <colgroup>
+                <col style="width:5%" />
+                <col style="width:5%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="width:20%" />
+                <col style="width:20%" />
+                <col style="width:8%" />
+                <col style="width:20%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><input type="checkbox" id="allCheckInput" /></th>
+                    <th scope="col">no</th>
+                    <th scope="col">출발 터미널</th>
+                    <th scope="col">도착 터미널</th>
+                    <th scope="col">출발 날짜/시간</th>
+                    <th scope="col">도착 날짜/시간</th>
+                    <th scope="col">가격</th>
+                    <th scope="col">등록날짜</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+
+            </ul>
+        </nav>
+    </div>
+
+    
+    <div class="searchBox routeSearchWrap">
+        <div class="selectWrap">
+            <select class="searchSelect">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+                <option value="routeStartTerminal">출발터미널</option>
+                <option value="routeEndTerminal">도착터미널</option>
+                <option value="routeTimeStartTime">출발시간</option>
+                <option value="routeTimeEndTime">도착시간</option>
+            </select>
+            <i class="bi bi-caret-down-fill"></i>
+        </div>
+        <input type="text" name="searchword" id="searchword" />
+        <button type="button" onclick="routeSearch()" value="검색"><i class="bi bi-search"></i></button>
+    </div>
+
+    <div class="flexBox btnWrap btnWrapBottom">
+        <a class="btn" href="/admin/routeTime/create">등록</a>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            엑셀등록
+        </button>
+        <a class="btn" href="javascript:onDelete()">삭제</a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">파일 업로드</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="excelUploadForm">
+                        <input type="file" name="excelFile" accept=".xls,.xlsx"/>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary" onclick="onUpload()">업로드</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/admin/routeTime.js"></script>
+{{>layout/footer}}

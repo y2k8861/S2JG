@@ -1,0 +1,37 @@
+
+
+{{>layout/adminHeader}}
+
+<div class="busUpdate">
+
+</div>
+
+<table class="table table-striped table-hover align-middle">
+    <thead>
+    <tr>
+
+    </tr>
+    </thead>
+    <tbody id="BusTableBody">
+    <!-- JS가 행을 넣어주는 위치 -->
+    <tr>
+        <th scope="col"  style="width:50%; text-align:center;";> 차량번호</th>
+        <td><div class="busNumber"></div> </td>
+    </tr>
+    <tr>
+        <th scope="col"  style="width:50%; text-align:center;";> 차량등급</th>
+        <td><div class="busClassNo"></div> </td>
+    </tr>
+    <tr>
+        <th scope="col"  style="width:50%; text-align:center;";> 차량위치</th>
+        <td><div class="busPosition"></div> </td>
+    </tr>
+    <tr>
+        <th scope="col"  style="width:50%; text-align:center;";> 등록일자</th>
+        <td><div class="busDate"></div> </td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="/js/admin/busView.js"></script>
+{{>layout/footer}}

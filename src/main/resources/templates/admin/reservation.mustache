@@ -1,0 +1,89 @@
+{{>layout/adminHeader}}
+
+<div class="container">
+    <h3 class="pageTite">이용현황 페이지</h3>
+
+    <div class="flexBox btnWrap btnWrapTop">
+        <button type="button" class="btn" onclick="onDownload()">액셀 받기</button>
+    </div>
+
+<!--    <div class="boardTopEtc">-->
+<!--        <div>-->
+<!--            <select class="pageBoardSize boardBtn" onchange="onPageBoardSize( this )">-->
+<!--                <option class="boardBtnFont" value="0">전체조회</option>-->
+<!--                <option class="boardBtnFont" value="1">날짜별</option>-->
+<!--                <option class="boardBtnFont" value="2">출발지별</option>-->
+<!--            </select>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="tableWrap">
+        <table class="table table-hover">
+            <colgroup>
+                <col style="width:5%">
+                <col style="width:7%">
+                <col style="width:6%">
+                <col style="width:21%">
+                <col style="width:6%">
+                <col style="width:21%">
+                <col style="width:5%">
+                <col style="width:8%">
+                <col style="width:21%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col" >번호</th>
+                <th scope="col">이름</th>
+                <th scope="col">출발</th>
+                <th scope="col">출발시간</th>
+                <th scope="col">도착</th>
+                <th scope="col">도착시간</th>
+                <th scope="col">시트</th>
+                <th scope="col">가격</th>
+                <th scope="col">예약일</th>
+            </tr>
+            </thead>
+            <tbody id="boardTableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--  페이지네이션  -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+            <!-- JS 페이지버튼이 들어갈 자리 -->
+        </ul>
+    </nav>
+
+<!--    <div class="boardSearchBox" id="searchbox"> &lt;!&ndash; 검색창 &ndash;&gt;-->
+<!--        <select class="key boardBtn"> &lt;!&ndash; 검색 key : SQL 검색시 사용할 필드명 &ndash;&gt;-->
+<!--            <option class="boardBtnFont" value="reservationDate">예약일</option>-->
+<!--            <option class="boardBtnFont" value="memberName">예약자이름</option>-->
+<!--            <option class="boardBtnFont" value="routeStartTerminal">출발지</option>-->
+<!--        </select>-->
+<!--        <input type="text" class="value" /> &lt;!&ndash; 검색 value : SQL 검색시 사용할 필드의 값 &ndash;&gt;-->
+<!--        <button class="boardBtn" onclick="onSearch()" type="button">검색</button>-->
+<!--    </div>-->
+    <div class="searchBox routeSearchWrap boardSearchBox" id="searchbox">
+        <div class="selectWrap">
+            <select class="searchSelect key boardBtn">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+                <option class="boardBtnFont" value="reservationDate">예약일</option>
+                <option class="boardBtnFont" value="memberName">예약자이름</option>
+                <option class="boardBtnFont" value="routeStartTerminal">출발지</option>
+            </select>
+            <i class="bi bi-caret-down-fill"></i>
+        </div>
+        <input type="text" class="value" name="searchword" id="searchword" />
+        <button class="boardBtn" type="button" onclick="onSearch()" value="검색"><i class="bi bi-search"></i></button>
+    </div>
+
+    <div>
+
+    </div>
+</div>
+
+
+<script src="/js/admin/reservation.js"></script>
+{{>layout/footer}}
+

@@ -1,0 +1,96 @@
+{{>layout/adminHeader}}
+<link rel="stylesheet" href="/css/bus.css" type="text/css">
+
+<h3 class="pageTite">버스 페이지</h3>
+
+
+
+<div class="busHeader">
+    <select class="busClassNo" onchange="onBcno(this.value)">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+        <option value="0">전체보기</option>
+        <option value="1">일반</option>
+        <option value="2">우등</option>
+        <option value="3" >프리미엄</option>
+    </select>
+
+    <div class="flexBox btnWrap">
+        <button type="button" class="btn" onclick="onDownload()">액셀 받기</button>
+    </div>
+<!--    <div class="busCRBox">-->
+
+<!--    </div>-->
+</div>
+<div class="tableWrap ">
+    <table class="table table-hover align-middle">
+            <colgroup>
+                <col style="width:5%" />
+                <col style="width:10%" />
+                <col style="width:30%" />
+                <col style="width:27.5%" />
+                <col style="width:27.5%" />
+            </colgroup>
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox" id="allCheckInput"></th>
+                <th scope="col">번호</th>
+                <th scope="col">차량번호</th>
+                <th scope="col">등급</th>
+                <th scope="col">차량위치</th>
+            </tr>
+        </thead>
+        <tbody id="BusTableBody">
+        <!-- JS가 행을 넣어주는 위치 -->
+        </tbody>
+    </table>
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <!-- JS가 페이지버튼을 넣어주는 위치 -->
+    </ul>
+</nav>
+
+
+<div class="searchBox">
+    <div class="selectWrap">
+        <select class="key">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+            <option value="busNumber">차량번호</option>
+            <option value="busPosition">지역</option>
+        </select>
+        <i class="bi bi-caret-down-fill"></i>
+    </div>
+    <input type="text" class="keyword"/>
+    <button type="button" onclick="onSearch()"value="검색"><i class="bi bi-search"></i></button>
+</div>
+
+<div class="flexBox btnWrap btnWrapBottom">
+    <a href="/admin/bus/create" class="btn">버스등록</a>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        엑셀등록
+    </button>
+    <a href="javascript:onDelete()" class="btn">버스삭제</a>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">파일 업로드</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="excelUploadForm">
+                    <input type="file" name="excelFile" accept=".xls,.xlsx"/>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" onclick="onUpload()">업로드</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/admin/bus.js"></script>
+{{>layout/footer}}

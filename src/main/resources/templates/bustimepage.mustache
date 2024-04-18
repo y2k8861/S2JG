@@ -1,0 +1,58 @@
+{{>layout/header}}
+<script src="/js/index.js"></script>
+<script src="/js/routetime.js"></script>
+<link rel="stylesheet" href="/css/common.css" type="text/css">
+<link rel="stylesheet" href="/css/busseat.css" type="text/css">
+
+<h3>버스 시간 페이지</h3>
+
+
+<!--    <div class="pagebtn">-->
+<!--        전체 시간표 :<span class="totalPage"></span>-->
+<!--        현재 시간표 :<span class="totalBoardSize"></span>-->
+<!--    </div>-->
+
+    <table id="routeTime" class="table table-hover table align-middle " >
+        <thead>
+        <tr>
+            <th scope="col" style="width:10%;">no</th>
+            <th scope="col" style="width:30%;">출발시간</th>
+            <th scope="col" style="width:30%;">도착시간</th>
+            <th scope="col" style="width:10%;">등급</th>
+            <th scope="col" style="width:20%;">가격</th>
+        </tr>
+        </thead>
+        <tbody id="boardTableBody">
+
+
+        </tbody>
+    </table>
+
+    <div style="  display: flex;
+  justify-content: center;
+  align-items: center;">
+
+        <div class="selectWrap" >
+
+            <select class="searchSelect">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+
+                <option value="routeTimeStartTime">출발시간</option>
+                <option value="routeTimeEndTime">도착시간</option>
+            </select>
+        </div>
+        <input type="text" class="keyword" name="keyword"/>   <!-- 검색keybord-->
+        <button type="button" onclick="onSearch()">검색</button>
+    </div>
+
+    <!--페이지 네이션-->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+
+
+        </ul>
+    </nav>
+
+
+</div>
+
+{{>layout/footer}}

@@ -1,0 +1,16 @@
+[33m1f66b20[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32most[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull --no-stat -v --progress origin master: Fast-forward
+[33m5edc086[m[33m ([m[1;31morigin/ost[m[33m)[m HEAD@{1}: commit: 240307 승택 버스등록 완료, 전체조회html
+[33m6033a4b[m HEAD@{2}: pull --no-stat -v --progress origin master: Fast-forward
+[33me9ddb60[m HEAD@{3}: commit: 240307 승택 버스 개별출력 진행중
+[33mac7c371[m HEAD@{4}: pull --no-stat -v --progress origin master: Merge made by the 'ort' strategy.
+[33m58004e2[m HEAD@{5}: commit (merge): Merge branch 'master' of https://github.com/ppppppppppkk/S2JG into ost
+[33mfbd1c79[m HEAD@{6}: commit: 240306 전체 버스 출력 진행중
+[33mef7cb26[m HEAD@{7}: commit: 240306 전체 버스 출력 진행중
+[33m0d7f66d[m HEAD@{8}: pull --no-stat -v --progress origin master: Fast-forward
+[33mad14007[m HEAD@{9}: commit: 240306 시작 전 커밋
+[33mc1201b7[m HEAD@{10}: pull --no-stat -v --progress origin master: Fast-forward
+[33me2df51e[m HEAD@{11}: commit: 240305 승택 기본 틀
+[33m9e15d11[m HEAD@{12}: pull --no-stat -v --progress origin master: Fast-forward
+[33m6924536[m HEAD@{13}: commit: 240304 승택 최초 커밋
+[33mffadeb4[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{14}: checkout: moving from master to ost
+[33mffadeb4[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{15}: clone: from https://github.com/ppppppppppkk/S2JG.git

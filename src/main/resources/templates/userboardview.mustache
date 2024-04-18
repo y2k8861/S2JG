@@ -1,0 +1,30 @@
+{{>layout/header}}
+<link rel="stylesheet" href="/css/common.css" type="text/css">
+<link rel="stylesheet" href="/css/board.css" type="text/css">
+
+<div class="container boardView">
+    <h3 style="margin-bottom:10px;"> 공지사항 상세페이지 </h3>
+
+    <div class="boardViewBox">
+
+
+
+        <div class="layout" style="border: 2px solid #ccc; padding: 10px; margin-top: 20px;">
+
+            <div style="height: 70px; ">제목 :<div class="btitle"></div> <br/> </div>
+            <div style="height:400px;">내용 :<div class="bcontent"></div>  </div>
+
+            <div class="board123">
+                작성일 :  <div class="bdate"></div>
+            </div>
+        </div>
+        <div class="btnBox btnWrap flexBox btnWrapBottom">
+            <a href="/userboard" class="btn"> 목록보기 </a>
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/userboardview.js"></script>
+
+{{>layout/footer}}

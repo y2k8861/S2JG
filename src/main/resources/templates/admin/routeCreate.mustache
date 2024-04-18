@@ -1,0 +1,43 @@
+{{>layout/adminHeader}}
+<link rel="stylesheet" href="/css/route.css" type="text/css">
+<h3 class="pageTite">루트 등록 페이지</h3>
+<div class="routeWiteWrap">
+    <div class="inputWrap">
+        <label for="routeStartTerminal"><h5>출발 터미널</h5></label>
+        <input type="text" name="routeStartTerminal" id="routeStartTerminal" class="w100 inputText" onkeyup="routeStartTerminalCheck()" />
+        <p class="routeStartTerminalCheck checkText">입력해주세요.</p>
+    </div>
+
+    <div class="inputWrap">
+        <label for="routeEndTerminal"><h5>도착 터미널</h5></label>
+        <input type="text" name="routeEndTerminal" id="routeEndTerminal" class="w100 inputText" onkeyup="routeEndTerminalCheck()" />
+        <p class="routeEndTerminalCheck checkText">입력해주세요.</p>
+    </div>
+
+    <div class="inputWrap">
+        <label for="routePrice" class="flexBox"><h5>거리당 가격</h5> <button id="btn_select" class="btn">적용하기</button> <span id="result">터미널 입력후 적용하기 버튼을 눌러주세요.</span></label>
+        <input type="text" name="routePrice" id="routePrice" class="w100 inputText" onkeyup="routePriceCheck()" readonly />
+        <p class="routePriceCheck checkText">입력해주세요.</p>
+    </div>
+
+    <div class="flexBox btnWrap btnWrapBottom">
+        <button class="btn createBtn" type="button" onclick="doPostRoute()">등록</button>
+        <a class="btn" href="/admin/route">취소</a>
+    </div>
+
+    <div class="ft_area">
+        <div class="ft_select_wrap">
+            <div class="ft_select">
+            </div>
+        </div>
+        <div class="map_act_btn_wrap clear_box"></div>
+        <div class="clear"></div>
+    </div>
+    <div class="map_act_btn_wrap clear_box"></div>
+</div>
+
+<script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=JRgtV5FJQ41HAHNM4hTiA7rGRIeQL6oJ15NhVii8"></script>
+<script src="/js/admin/routeDistance.js"></script>
+</div>
+    <script src="/js/admin/routeWrite.js"></script>
+{{>layout/footer}}

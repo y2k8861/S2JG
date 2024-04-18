@@ -1,0 +1,37 @@
+{{>layout/adminHeader}}
+<h3 class="pageTite">노선별 시간 등록 페이지</h3>
+<div class="routWiteWrap">
+    <div class="inputWrap">
+        <label for="routeNo"><h5>노선</h5></label>
+        <select class="select-box w100" id="routeNo" onchange="getBusPosition()">
+            <option value="0" checked>선택하세요.</option>
+        </select>
+    </div>
+
+    <div class="inputWrap">
+        <label for="routeTimeStartTime"><h5>출발 날짜 및 시간</h5></label>
+        <input type="datetime-local" name="routeTimeStartTime" id="routeTimeStartTime" class="w100 inputText" onkeyup="" />
+    </div>
+
+    <div class="inputWrap">
+        <label for="routeTimeEndTime"><h5>도착 날짜 및 시간</h5></label>
+        <input type="datetime-local" name="routeTimeEndTime" id="routeTimeEndTime" class="w100 inputText" onkeyup="" />
+    </div>
+
+    <div class="inputWrap">
+        <label for="busNo"><h5>버스</h5></label>
+        <select class="select-box w100" id="busNo">
+            <option value="0" checked>노선을 선택해 주세요.</option>
+        </select>
+    </div>
+
+    <br />
+    <p>왕복 노선까지 같이 등록됩니다.</p>
+
+    <div class="flexBox btnWrap btnWrapBottom">
+        <button class="btn createBtn" type="button" onclick="doPostRouteTime()">등록</button>
+        <a class="btn" href="/admin/routeTime">취소</a>
+    </div>
+</div>
+<script src="/js/admin/routeTimeWrite.js"></script>
+{{>layout/footer}}

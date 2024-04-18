@@ -1,0 +1,111 @@
+/* 공용 CSS S */
+body {font-family: 'SUITE Variable', sans-serif; font-size:16px;}
+.inner {max-width: 1200px; width:calc(100% - 40px); margin:0 auto;}
+.flexBox {display:flex; flex-flow: row wrap;}
+a {color:#333; text-decoration:none; transition:all 0.3s;}
+a:hover {color:#004CC7;}
+
+.bodyContainer {padding: 50px 0;}
+.w100 {display: block; width: 100%;}
+.w50  {display: block; width: 50%;}
+
+/* 대제목 */
+h3 {font-size: 2.1875em; font-weight:700;}
+/* 소제목 */
+h5 {font-size: 1.5625em; font-weight:500;}
+/* 일반 */
+p {font-size: 1.125em; font-weight:400;}
+
+.pageTite {margin-bottom: 30px;}
+
+/* 공통 Button  */
+.btnWrap {justify-content: flex-end; }
+.btnWrapTop {margin-bottom: 30px;}
+.btnWrapBottom {margin-top: 30px;}
+.btn {width: 100px; height: 40px; display: flex; flex-flow: row wrap; align-items: center; justify-content: center; transition: all 0.3s; border: 1px solid #111; background-color: #111; color: #fff; outline: none; text-decoration: none; line-height: 1.25em; font-size: 1.125em;}
+.btn01 {width:auto; height:auto; padding: 5px; display: inline-flex; line-height: 1em; font-size: 0.875em;}
+.btn:nth-child(n+2) {margin-left: 15px;}
+.btn:hover {background-color: #004CC7;  border-color: #004CC7; color: #fff;}
+
+/* 공통 input */
+.inputWrap:nth-child(n+2) {margin-top: 30px;}
+.inputWrap label {margin-bottom: 15px;}
+.inputWrap input {font-size: 1.125em; height: 50px; }
+.inputWrap label {align-items:center;}
+.inputWrap label .btn {margin-right:20px;}
+
+/* 공통 SELECT */
+.select-box {font-size: 1.125em; height: 50px; }
+
+.active>.page-link, .page-link.active {background-color: #004CC7;}
+
+/* 공통 테이블 */
+.table {font-size: 1.25em;}
+.tableWrap table tr {border-bottom: 1px solid #ddd;}
+.tableWrap table tr {cursor: pointer;}
+
+
+/* 텍스트 색상 */
+.colorRed {color: #ee2233!important;}
+.colorGreen {color: #22ee33!important}
+
+/* 유효성 검사  */
+.checkText {font-size: 0.875em; color: #888; margin-top: 10px;}
+
+/* 검색창 CSS */
+.searchBox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top : 20px;
+}
+
+.searchBox > * {display: block;}
+
+.searchBox .selectWrap {position: relative;}
+
+.searchBox .selectWrap > select {
+    height: 40px; padding: 0 30px 0 10px;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .searchBox .selectWrap > i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    transform: translateY(-50%);
+    font-size: 15px;
+    transition: all 0.2s;
+  }
+
+  /* .searchBox .selectWrap > select:focus + i {
+    transform: translateY(-50%) rotate(180deg);
+  } */
+
+.searchBox > input {height: 40px; width: 300px; margin: 0 10px;}
+
+.searchBox > button {
+    width: 70px; height: 40px;
+    background-color: #111;
+    color: #fff; transition: all 0.3s;
+    font-weight: 700; font-size: 1.125em;
+    outline: none; border: none;
+}
+
+.searchBox > button:hover {background-color: #004CC7;}
+
+
+#loadingBox{
+position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #FFF;
+    z-index: 999999999999;
+}

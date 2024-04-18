@@ -1,0 +1,67 @@
+.signupBox {
+    max-width : 800px;
+    border:1px solid #111;
+    border-radius : 20px;
+    padding : 50px;
+}
+
+.inputWrap{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.inputWrap .abBox {
+    position : absolute;
+    top : calc(100% + 3px);
+    left : 0;
+    z-index : 1;
+}
+
+inputWrap .abBox2 {
+    z-index : 2;
+    background-color : #fff;
+}
+
+.inputWrap input {
+    font-size: 1.125em; height: 50px; padding : 0 15px;
+    border:none;
+    outline : none;
+    border-bottom:1px solid #ddd;
+}
+.signupTitle{
+    width: 100%;
+    text-align: center;
+}
+.signupBox{ 
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+    
+}
+.emailbox{
+    position: relative;
+}
+.authreqbtn{
+    position: absolute;
+    right: 0; 
+    top: 0;
+    height: 100%;
+}
+#signUpBtn > a{
+    color : white;
+}
+.signUpBtnBox{
+    display : flex;
+    justify-content : center;
+}
+.signUpFonts{
+    color : red;
+}
+.signUpFontSize{
+    font-size: 1.5625em;
+    font-weight:500;
+}
+
+.signUpBtnBox {width:100%; margin-top:20px; flex-flow:row wrap;}
+.signUpBtn {width: 100%; }
+.signUpBtn:nth-child(n+2) {margin-top:15px; margin-left:0;}

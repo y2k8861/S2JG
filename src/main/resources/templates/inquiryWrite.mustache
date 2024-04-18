@@ -1,0 +1,32 @@
+{{>layout/header}}
+<div class="container">
+    <h3 class="pagetite"> 문의 페이지 </h3>
+    <form class="inquiryWriteForm">
+
+        <div class="inputWrap">
+            <label for="ititle"><h5>제목</h5></label>
+            <input class="w100" name="ititle" type="text"/>
+        </div>
+
+        <div class="inputWrap">
+            <label for="ipw"><h5>비밀번호</h5></label>
+            <input name="ipw" type="text" class="w100" />
+        </div>
+
+        <div class="inputWrap">
+            <label for="icontent"><h5>내용</h5></label>
+            <textarea id="summernote" name="icontent" ></textarea>
+        </div>
+    </form>
+
+    <div class="btnWrap flexBox btnWrapBottom">
+        <button class="btn" onclick="onInquiryWrite()" type="button">쓰기</button>
+    </div>
+</div>
+
+<script src="/js/inquiryWrite.js"></script>
+<!-- 섬머노트 API CDN  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/lang/summernote-ko-KR.min.js" ></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.css"  />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.js" ></script>r
+{{>layout/footer}}

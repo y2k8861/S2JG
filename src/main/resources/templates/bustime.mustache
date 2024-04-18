@@ -1,0 +1,36 @@
+{{>layout/header}}
+<script src="/js/index.js"></script>
+<script src="/js/routetime.js"></script>
+<link rel="stylesheet" href="/css/busseat.css" type="text/css">
+
+<h3>버스 시간 페이지</h3>
+<div>
+    <div> 출발 : 부산 </div>
+    <div> 도착 : 서울 </div>
+   <button type="button"> <a href="/route/time/reserve"> 앞으로가기 </a></button>
+    <select class="key"> <!-- 검색key : sql 검색 시 사용할 필드명-->
+        <option class="" onchange="premiumclick()" >프리미엄</option>
+        <option value="" onchange="hardclick" >우등</option>
+        <option value="" onchange="normalclick" >일반</option>
+    </select>
+
+
+    <table class="bus_table">
+        <thead>
+        <tr >
+            <td>버스 출발 시간</td>
+            <td>버스 도착 시간</td>
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+
+
+
+        </tbody>
+    </table>
+</div>
+
+{{>layout/footer}}

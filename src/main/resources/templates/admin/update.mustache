@@ -1,0 +1,33 @@
+{{>layout/adminHeader}}
+
+<div class="container">
+    <h3 class="pagetite"> 공시사항 수정 페이지 </h3>
+    <form class="boardUpdateForm">
+
+        <div class="inputWrap">
+            <label for="btitle"><h5>제목</h5></label>
+            <input type="text" name="btitle" id="btitle" class="w100 inputText btitle" />
+        </div>
+
+        <div class="inputWrap">
+            <label for="bcontent"><h5>내용</h5></label>
+            <textarea id="summernote" name="bcontent" class="bcontent" > </textarea>
+        </div>
+    </form>
+
+    <div class="btnWrap flexBox btnWrapBottom">
+        <button onclick="onUpdate()" type="button" class="btn">쓰기</button>
+        <a href="/board" class="btn"> 목록보기 </a>
+    </div>
+
+</div>
+
+<script src="/js/admin/update.js"></script>
+
+<!-- 섬머노트 API CDN  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/lang/summernote-ko-KR.min.js" ></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.css"  />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.js" ></script>
+
+
+{{>layout/footer}}

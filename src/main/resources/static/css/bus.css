@@ -1,0 +1,35 @@
+.busHeader{
+    display : flex;
+    justify-content : space-between;
+    margin: 20px 0;
+}
+
+.busHeader > a{
+    border : 1px solid black;
+    padding : 5px;
+}
+
+.busCRBox{
+    display : flex;
+    margin : 0;
+}
+
+.busCreateBtnBox{
+   display : flex;
+   justify-content : flex-end;
+}
+
+.excelUploadForm{
+    padding : 0;
+    display : flex;
+}
+
+.excelUploadForm > input {
+    width : 200px;
+}
+
+.excelForm{
+    margin: 20px 10px;
+    display : flex;
+    justify-content : flex-end;
+}

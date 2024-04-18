@@ -1,0 +1,49 @@
+{{>layout/header}}
+<link rel="stylesheet" href="/css/signup.css" type="text/css">
+
+<div class="container signupBox">
+    <h3 class="signupTitle"> 회원가입 페이지</h3>
+    <div class="inputWrap">
+        <input  onkeyup="idCheck()" class="w100 signInput" type="text" id="id" name="memberId" placeholder="아이디를 입력해주세요."/>
+        <div class="abBox idcheckbox signUpFonts">  </div>
+    </div>
+    <div class="inputWrap">
+        <input onkeyup="pwCheck()" class="w100" type="password" id="pw" name="memberPw" placeholder="비밀번호를 입력해주세요." />
+    </div>
+
+    <div class="inputWrap">
+        <input onkeyup="pwCheck()" class="w100" type="password" id="pwconfirm" name="pwconfirm" placeholder="비밀번호를 입력해주세요." />
+        <div class="abBox pwcheckbox"> </div>
+    </div>
+
+    <div class="inputWrap">
+        <input onkeyup="namecheck()" class="w100" type="text" id="name" name="name" placeholder="이름을 입력해주세요."/>
+        <div class="abBox namecheckbox checkbox"></div>
+    </div>
+
+    <div class="inputWrap">
+        <div class="emailbox">
+            <input onkeyup="emailcheck()" class="w100" type="text" id="email" name="memberEmail" placeholder="이메일을 입력해주세요." />
+            <button type="button" class="authreqbtn btn" onclick="authreq( this )" disabled > 인증요청 </button>
+        </div>
+        <div class="abBox emailcheckbox"> </div>
+        <div class="abBox abBox2 authbox">
+
+        </div>
+    </div>
+
+
+    <div class="inputWrap">
+        <input onkeyup="phonecheck()" class="w100" type="text" id="phone" name="memberPhone" placeholder="전화번호를 입력해주세요." />
+        <div class="abBox phonecheckbox"> </div>
+    </div>
+
+    <div class="signUpBtnBox">
+        <button class="signUpBtn btn" type="button" onclick="signup()">회원가입</button>
+<!--        <button id="signUpBtn" class="signUpBtn btn" type="button"><a href="/member/login"> 로그인 </a> </button>-->
+    </div>
+</div>
+
+<script src="/js/member.js"></script>
+{{>layout/footer}}
+

@@ -1,0 +1,30 @@
+{{>layout/adminHeader}}
+<link rel="stylesheet" href="/css/bus.css" type="text/css">
+
+<div class="busWiteWrap">
+    <div class="inputWrap">
+        <label for="busNumber"><h5>차량번호</h5></label>
+        <input type="text" name="busNumber" id="busNumber" class="busNumber w100 inputText" />
+    </div>
+
+    <div class="inputWrap">
+        <label for="busClassNo"><h5>차량등급</h5></label>
+        <select class="busClassNo select-box w100"  id="busClassNo">    <!-- 검색 key : SQL 검색시 사용할 필드명  -->
+            <option value="1">일반</option>
+            <option value="2">우등</option>
+            <option value="3" >프리미엄</option>
+        </select>
+    </div>
+
+    <div class="inputWrap">
+        <label for="busPosition"><h5>차량위치</h5></label>
+        <input type="text" name="busPosition" id="busPosition" class="busPosition w100 inputText" />
+    </div>
+</div>
+
+<div class="doUpdate flexBox btnWrap btnWrapBottom">
+
+</div>
+
+<script src="/js/admin/busUpdate.js"></script>
+{{>layout/footer}}

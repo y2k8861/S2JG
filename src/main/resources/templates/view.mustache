@@ -1,0 +1,30 @@
+{{>layout/adminHeader}}
+<link rel="stylesheet" href="/css/common.css" type="text/css">
+<link rel="stylesheet" href="/css/board.css" type="text/css">
+
+<div class="container">
+    <h3 style="margin-bottom:10px;"> 공지사항 상세페이지 </h3>
+
+    <div class="boardViewBox">
+        <div class="layout" style="border: 2px solid #ccc; padding: 10px; margin-top: 20px;">
+
+            <div>제목 :<div class="btitle" style="height: 70px;"></div> <br/> </div>
+            <div>내용 :<div class="bcontent"  style="height:400px;"></div>  </div>
+
+            <div class="board123">
+                작성일 :  <div class="bdate"></div>
+            </div>
+        </div>
+
+        <div class="btnBox btnWrap flexBox btnWrapBottom">
+            <button type="button" class="btn" ><a href="/board/update">수정</a></button>
+            <button type="button" class="btn" onclick="onDelete()">삭제</button>
+            <a href="/board" class="btn"> 목록보기 </a>
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/view.js"></script>
+
+{{>layout/footer}}
